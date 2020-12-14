@@ -8,7 +8,7 @@ const forecast= require('./utils/forecast');
 
 //Define paths for Express config
 const publicDirectoryPath= path.join(__dirname, '../public');
-const viewPath= path.join(__dirname, '../templates/views'); //Cambio el nombre de "views"
+const viewPath= path.join(__dirname, '../templates/views'); //Cambio el nombre de views
 const partialsPath= path.join(__dirname, '../templates/partials');
 
 // Setup static directory to serve
