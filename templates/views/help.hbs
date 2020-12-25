@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/styles.css"/>
     <link rel="icon" href="/img/weather.png"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <title>Help</title>
 </head>
 <body>
     <div class="main-content">
         {{>header}}
-        <p>{{message}}</p>
+        <p class="help-message">{{message}}</p>
+
+        <p class="help-p">This app works with the <span><a href="https://docs.mapbox.com/api/search/geocoding/" target="_blank" >Geocoding API</a></span>, which gives us the specific coordinates of a certain address, 
+            and the <span><a href="https://weatherstack.com/" target="_blank">Weatherstack API</a></span>, which delivers us the weather of said coordinates. </p>
     </div>
 
     {{>footer}}

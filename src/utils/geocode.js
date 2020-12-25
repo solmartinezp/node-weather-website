@@ -1,6 +1,6 @@
 const request= require('request');
 
-//GEOCODING API: te convierte una dirección en latitud y longitud para pasarle al weatherstack request
+//GEOCODING API: 
 const geo_token= 'pk.eyJ1Ijoic29sbWFydGluZXpwIiwiYSI6ImNraWhwOW95NjBjcDEycXFsMWp5cXN0eG0ifQ.nf2HIkEgm9seaKn7D6BrPQ';
 
 const geocode= (address, callback) => {

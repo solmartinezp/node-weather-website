@@ -10,11 +10,11 @@ const port= process.env.PORT || 3000;
 
 //Define paths for Express config
 const publicDirectoryPath= path.join(__dirname, '../public');
-const viewPath= path.join(__dirname, '../templates/views'); //Cambio el nombre de views
+const viewPath= path.join(__dirname, '../templates/views'); //Chaange the name of 'views'
 const partialsPath= path.join(__dirname, '../templates/partials');
 
 // Setup static directory to serve
-app.use(express.static(publicDirectoryPath)); // sube todo lo que esté en el directorio public
+app.use(express.static(publicDirectoryPath)); // it adds everything that's on the 'public' directory
 
 // Setup handlebars and views location
 app.set('view engine', 'hbs'); //To tell express which template engine we're going to use
@@ -37,7 +37,7 @@ app.get('/about', (req, res)=> {
 
 app.get('/help', (req, res)=> {
     res.render('help', {
-        message: "Help Message",
+        message: "Enter your address in order to get your weather!",
         title: "Help",
         name: "Sol Martinez"
     })

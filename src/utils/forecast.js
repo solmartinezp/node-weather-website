@@ -1,6 +1,6 @@
 const request= require('request');
 
-//WEATHERSTACK API: te trae la temperatura
+//WEATHERSTACK API: to get the temperature
 const weather_token= '1b9d1a0721909753db71d65ae9a572e7';
 
 const forecast= (paramOne, paramTwo, callback) => {
@@ -15,10 +15,9 @@ const forecast= (paramOne, paramTwo, callback) => {
         } else {
             callback(undefined, response.body.current.weather_descriptions[0]+ ': It is currently '+ response.body.current.temperature +' degrees out. It feels like ' + response.body.current.feelslike + ' degrees out.');
         }
-    }); //function to make the request that takes 2 params:
-    //First param: el objeto con la url de donde quiero obtener los datos donde
-    //también le especifico que quiero que devuelva un JSON 
-    //Second param: una función con lo que quiero que haga una vez que obtengo los datos    
+    }); //function to make the request that takes 2 parameters:
+    //First parameter: an object with the URL of where I want to get the data from in JSON format 
+    //Second parameter: a function that indicates that I want to do with that data once I obtain it.    
 }
 
 module.exports= forecast;

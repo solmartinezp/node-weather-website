@@ -1,6 +1,7 @@
 body {
-    color: #333333;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #272727;
+    color: white;
+    font-family: 'Raleway', sans-serif;
     max-width: 650px;
     margin: 0 auto;
     padding: 0 16px;
@@ -9,24 +10,52 @@ body {
     min-height: 100vh;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 header {
     margin-top: 16px;
     margin-bottom: 48px;
 }
 
-h1 {
+.title {  
+    background: linear-gradient(60deg, rgb(194 193 188), rgb(90 150 177), rgb(255 255 255), rgb(137 145 151));
+    background-size: 200% 200%;
+    background-repeat: repeat;  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
     font-size: 64px;
     margin-bottom: 16px;
+    animation: gradient 5s ease infinite;
+    font-weight: 800;
+
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 header a {
-    color: #888888;
+    color:rgb(211, 210, 210);
     margin-right: 16px;
     text-decoration: none;
 }
 
+header a:hover {
+    color: rgb(158, 188, 197);
+}
+
 footer {
-    color: #888888;
+    color: rgb(211, 210, 210);
     border-top: 1px solid #eeeeee;
     margin-top: 16px;
     padding: 16px 0;
@@ -34,11 +63,22 @@ footer {
 
 .portrait {
     width: 250px;
+    border-radius: 5px;
+    border: 3px solid white;
 }
 
 .main-content {
     flex-grow: 1;
-    
+}
+
+.about-portrait {
+    display: flex;
+    flex-direction: row; /* cambiar en mobile*/
+}
+
+.info-about {
+    padding: 10px;
+    text-align: center;
 }
 
 input {
@@ -47,9 +87,30 @@ input {
 }
 
 button {
-    cursor: poiner;
+    cursor: pointer;
     border: 1px solid #888888;
-    background: #888888;
-    color: white;
+    color: #202020;
+    background-color: white;
     padding: 8px;
+}
+
+button:hover {
+    background-color: rgb(211, 210, 210);
+}
+
+span,h4 a {
+    text-decoration: underline;
+}
+
+span,h4 a:hover {
+    color: rgb(201, 238, 250);
+}
+
+@media only screen and (max-width: 768px)  {
+    .about-portrait {
+       flex-direction: column;
+   }
+   .portrait {
+       align-self: center;
+   }
 }
